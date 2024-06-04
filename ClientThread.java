@@ -1,13 +1,14 @@
+
 // Save this as Server/ClientThread.java
 import java.io.*;
 import java.net.*;
 
 public class ClientThread implements Runnable {
     private Socket socket;
-    private Server server;
+    private ServerD server;
     private String clientName;
 
-    public ClientThread(Server server, Socket socket) {
+    public ClientThread(ServerD server, Socket socket) {
         this.server = server;
         this.socket = socket;
     }
@@ -40,7 +41,8 @@ public class ClientThread implements Runnable {
                     if (in.available() > 0) {
                         String input = in.readUTF();
                         for (ClientThread thatClient : server.getClients()) {
-                            DataOutputStream outputParticularClient = new DataOutputStream(thatClient.getSocket().getOutputStream());
+                            DataOutputStream outputParticularClient = new DataOutputStream(
+                                    thatClient.getSocket().getOutputStream());
                             outputParticularClient.writeUTF(input + " GOT FROM SERVER");
                         }
                     }
