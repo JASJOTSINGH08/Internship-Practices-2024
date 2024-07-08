@@ -1,0 +1,7 @@
+>> 01-07-24 11:34:30  ( Ram ) hi
+>> 01-07-24 11:34:35  ( Ram ) how are you?
+<< 01-07-24 11:34:56  ( Varun ) hello
+<< 01-07-24 11:34:58  ( Varun ) i am good
+<< 01-07-24 11:35:08  ( Varun ) how are you going?
+>> 01-07-24 11:35:13  ( Ram ) great
+<< 01-07-24 11:35:19  ( Varun ) wow!!!
